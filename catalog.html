@@ -7,13 +7,13 @@
   <body>
     <header class="page-header">
 	  <nav>
-	    <a class="main-header-logo" href="index.html"><svg class="logo-svg"></svg></a>
+	    <a class="main-header-logo" href="index.html"><img src="img/nerds-logo.svg"><svg class="logo-svg"></svg></a>
 	    <ul>
 		  <li><a href="studio.html">Студия</a></li>
 		  <li><a href="customers.html">Клиенты</a></li>
 		  <li><a href="catalog.html">Магазин</a></li>
 		  <li><a href="contacts.html">Контакты</a></li>
-		  <li><a href="basket.html"><img src="img/cart-icon.svg">Корзина</a></li>
+		  <li><a href="basket.html"><img src="img/cart-icon.svg"> Корзина</a></li>
 		</ul>
 		<h1>МАГАЗИН ГОТОВЫХ ШАБЛОНОВ</h1>
 	  </nav>
@@ -44,31 +44,64 @@
 			  <li><a href="#">СЛЕДУЮЩАЯ</a></li>
 			</ul>
 		</section>
-		<section>
-		  <h2>Стоимость:</h2>
-		    <input type="range" min="0" max="15000" step="1">15000
-		</section>
-		<section>
+		  <section>
+		<form method="post" action="https://echo.htmlacademy.ru">
+		<fieldset>
+		  <ul>
+		    <h2><label for="count">Стоимость:<input type="range" min="0" max="15000" step="1"></label></h2>
+		  </ul>
+		  <ul>
+		    <li><label for="from">ОТ<input type="button" value="0" id="from" disabled></label></li>
+		  </ul>
+		  <ul>
+		    <li><label for="to">ДО<input type="button" value="15000" id="to" disabled></label></li>
+		  </ul>
+		  </fieldset>
+		  <fieldset>
 		  <h2>Сетка:</h2>
-		    <input type="radio" selected value="Адаптивная"><img src="img/radio-on.svg">Адаптивная
-			<input type="radio" value="Фиксированная"><img src="img/radio-off.svg">Фиксированная
-			<input type="radio" value="Резиновая"><img src="img/radio-off.svg">Резиновая
-		</section>
-		<section>
+		  <ul>
+		    <li><label for="adaptive">Адаптивная<input type="radio" checked value="Адаптивная" id="adaptive"></label></li>
+			<li><label for="fixed">Фиксированная<input type="radio" value="Фиксированная" id="fixed"></label></li>
+			<li><label for="rubber">Резиновая<input type="radio" value="Резиновая" id="rubber"></label></li>
+			</ul>
+			</fieldset>
+			<fieldset>
 		  <h2>Особенности</h2>
-		    <input type="checkbox" value="Слайдер" selected><img src="img/checkbox-on.svg">Слайдер
-			<input type="checkbox" value="Блок преимуществ"><img src="img/checkbox-off.svg">Блок преимуществ
-			<input type="checkbox" value="Новости" selected><img src="img/checkbox-on.svg">Новости
-			<input type="checkbox" value="Галерея"><img src="img/checkbox-off.svg">Галерея
-			<input type="checkbox" value="Корзина"><img src="img/checkbox-off.svg">Корзина
-			<input type="button" value="Показать">Показать
-		</section>
+		  <ul>
+		    <li><label for="slider">Слайдер<input type="checkbox" value="Слайдер" checked id="slider"></label></li>
+			<li><label for="an array of benefits">Блок преимуществ<input type="checkbox" value="Блок преимуществ" id="an array of benefits"></label></li>
+			<li><label for="news">Новости<input type="checkbox" value="Новости" checked id="news"></label></li>
+			<li><label for="gallery">Галерея<input type="checkbox" value="Галерея" id="gallery"></label></li>
+			<li><label for="basket">Корзина<input type="checkbox" value="Корзина" id="basket"></label></li>
+		  </ul>
+		  </fieldset>
+		  <label for="show"><button type="submit" value="Показать" id="show"></label>
+		  </form>
+		  </section>
+		  </main>
 		<footer>
 	    <section>
+		<img src="img/contacts.png">
 		  <h3>NERDS DESIGN STUDIO</h3>
 		    <p>191186, Санкт-Петербург,<br>ул.Б.Конюшенная,д.19/8</p>
 			<p>тел. +7(812)275-75-75</p>
 			<a href="#">НАПИШИТЕ НАМ</a>
+			<form method="post" action="https://echo.htmlacademy.ru">
+			<fieldset>
+			  <ul>
+			   <li><label for="your-name">Ваше имя:<input type="login" name="name" id="your-name" placeholder="Представьтесь, пожалуйста"></label></li>
+			  </ul>
+			   <ul>
+			    <li><label for="your-email">Ваш e-mail:<input type="email" name="email" id="your-email" placeholder="Для отправки ответа"></label></li>
+			   </ul>
+			   <ul>
+			    <li><label for="text-of-the-letter">Текст письма:<textarea id="text-of-the-letter" name="text_of_the_letter" placeholder="В свободной форме"></textarea></label></li>
+			  </ul>
+			  <ul>
+			    <li><label for="send"><button type="submit" id="send" name="Send"></label></li>
+			  </ul>
+			  </fieldset>
+			  </form>
 		</section>
 	    <section>
 		  <h2>Давайте дружить, это выгодно!</h2>
@@ -79,6 +112,6 @@
 				<li><a href="instagram.com"><img src="img/insta-icon.svg">instagram.com</a></li>
 			  </ul>
 		</section>
-	  </footer>		  
+	  </footer>	  
   </body>
 </html>
