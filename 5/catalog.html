@@ -10,7 +10,7 @@
     <header class="main-header">
 	  <nav class="main-navigation">
 	    <a class="main-header-logo" href="index.html"><img src="img/nerds-logo.svg"><svg class="logo-svg"></svg></a>
-	    <ul>
+	    <ul "navigation-content">
 		  <li><a href="studio.html">Студия</a></li>
 		  <li><a href="customers.html">Клиенты</a></li>
 		  <li><a href="catalog.html">Магазин</a></li>
@@ -23,14 +23,14 @@
 	  <main>
 	    <section class="filter"> 
 		  <h2>СОРТИРОВАТЬ:</h2>
-		     <ul>
+		     <ul class="filter-content">
 			  <li><a href="#">ПО ЦЕНЕ</a></li>
 			  <li><a href="#">ПО ТИПУ</a></li>
 			  <li><a href="#">ПО НАЗВАНИЮ</a></li>
 			  <img src="img/icon-down-dir.svg">
 			  <img src="img/icon-up-dir.svg">
 			</ul>
-			<ul>
+			<ul class="slides-content>
 			  <li><a href="#"><img src="img/img-sedona_pic.png" alt="SEDONA"></a><div><h3>SEDONA</h3><p>Информационный сайт<br>для туристов</p><a class="red-button" href="#">9900 РУБ</a></div>
 			  <li><a href="#"><img src="img/img-pink_pic.png" alt="PINK"></a><div><h3>PINK APP</h3><p>Продуктовый лендинг<br>приложения для IOS и Android</p><a class="red-button" href="#">9900 РУБ</a></div>
 			  <li><a href="#"><img src="img/img-barbershop_pic.png" alt="Barbershop"></a><div><h3>BARBERSHOP</h3><p>Сайт салона красоты.<br>Для мужчин, да.</p><a class="red-button" href="#">9900 РУБ</a></div>
@@ -38,7 +38,7 @@
 			  <li><a href="#"><img src="img/img-aplus_pic.png" alt="A+"></a><div><h3>A PLUS</h3><p>Лендинг курсов повышения<br>квалификации</p><a class="red-button" href="#">9900 РУБ</a></div>
 			  <li><a href="#"><img src="img/img-kvast_pic.png" alt="КВАСТ"></a><h3>КВАСТ</h3><p>Промо-сайт производителя<br>крафтового кваса</p><a class="red-button" href="#">9900 РУБ</a></div>
 			</ul>
-		    <ul>
+		    <ul class="buttons-content">
 			  <li><a type="button" href="#" class="page-number-one">1</a></li>
 			  <li><a type="button" href="#" class="page-number-two">2</a></li>
 			  <li><a type="button" href="#" class="page-number-three">3</a></li>
@@ -48,26 +48,41 @@
 		<section class="count">
 		<form method="post" action="https://echo.htmlacademy.ru">
 		<fieldset>
-		  <ul>
-		    <li><label for="count">Стоимость:<input type="range" min="0" max="15000" step="1" id="count" name="count"></label></li>
+		  <ul class="count-content">
+		    <li>
+			  <label for="count">
+			  <h3>СТОИМОСТЬ:</h3>
+			  </label>
+			  <input type="range" min="0" max="15000" step="1" id="count" name="count">
+			</li>
+		 </ul>
+		  <ul class="from-content">
+		    <li>
+			  <label for="from">
+			    ОТ 
+			  </label>
+			  <input type="button" value="0" id="from" name="from">
+			</li>
 		  </ul>
-		  <ul>
-		    <li><label for="from">ОТ <input type="button" value="0" id="from" name="from"></label></li>
-		  </ul>
-		  <ul>
-		    <li><label for="to">ДО <input type="button" value="15000" id="to" name="to"></label></li>
+		  <ul class="to-content">
+		    <li>
+			  <label for="to">
+			    ДО 
+			  </label>
+			  <input type="button" value="15000" id="to" name="to">
+			</li>
 		  </ul>
 		  </fieldset>
 		  <fieldset>
-		  <h2>Сетка:</h2>
-		    <ul>
+		  <h3>СЕТКА:</h3>
+		    <ul class="grid-content">
 		      <li>
 			    <input type="radio" id="adaptive-radio" name="adaptive" checked>
 			    <label for="adaptive-radio">
 				  Адаптивная
 				</label>
 			  </li>
-			  <li>
+			  <li class="fixed-content">
 			    <input type="radio" id="fixed-radio" name="fixed">
 			    <label for="fixed-radio">
 				  Фиксированная
@@ -82,8 +97,8 @@
 			</ul>
 			</fieldset>
 			<fieldset>
-		  <h2>Особенности</h2>
-		    <ul>
+		  <h3>ОСОБЕННОСТИ</h3>
+		    <ul class="peculiar properties">
 			  <li>
 			    <input type="checkbox" id="slider-checkbox" name="slider" checked>
 				<label for="slider-checkbox">
@@ -114,8 +129,11 @@
 			    Корзина
 			  </label>
 			  </li>
+			  </ul>
+		  <label for="show">
+		  <a type="button" href="#" id="show" class="show">ПОКАЗАТЬ</a>
+		  </label>
 		  </fieldset>
-		  <label for="show"><input type="button" value="Показать" id="show" class="page-number"></label>
 		  </form>
 		  </section>
 		  </main>
@@ -128,24 +146,43 @@
 			<a type="button" href="#" class="red-button">НАПИШИТЕ НАМ</a>
 			<form method="post" action="https://echo.htmlacademy.ru">
 			<fieldset>
-			  <ul>
-			   <li><label for="your-name"> Ваше имя: <input type="login" name="name" id="your-name" placeholder="Представьтесь, пожалуйста"></label></li>
+			  <ul class="login-field">
+			   <li>
+			     <label for="your-name"> 
+			     Ваше имя: 
+			     </label>
+			     <input type="login" name="name" id="your-name" placeholder="Представьтесь, пожалуйста">
+			   </li>
 			  </ul>
-			   <ul>
-			    <li><label for="your-email"> Ваш e-mail: <input type="email" name="email" id="your-email" placeholder="Для отправки ответа"></label></li>
+			   <ul class="email-field">
+			    <li>
+				  <label for="your-email">
+				  Ваш e-mail:
+				  </label>
+				  <input type="email" name="email" id="your-email" placeholder="Для отправки ответа">
+				</li>
 			   </ul>
-			   <ul>
-			    <li><label for="text-of-the-letter"> Текст письма: <textarea id="text-of-the-letter" name="text_of_the_letter" placeholder="В свободной форме"></textarea></label></li>
+			   <ul class="comment-field">
+			    <li>
+				  <label for="text-of-the-letter"> 
+				  Текст письма: 
+				  </label>
+				  <textarea id="text-of-the-letter" name="text_of_the_letter" placeholder="В свободной форме"></textarea>
+			  </li>
 			  </ul>
-			  <ul>
-			    <li><label for="send"><input type="button" id="send" name="Send" value="ОТПРАВИТЬ" class="red-button"></label></li>
+			  <ul class="send-button">
+			    <li>
+				<label for="send">
+				<input type="button" id="send" name="Send" value="ОТПРАВИТЬ" class="red-button">
+				</label>
+				</li>
 			  </ul>
 			  </fieldset>
 			  </form>
 	    <section class="social-networks">
 		  <h2>Давайте дружить, это выгодно!</h2>
 		    <p>Скидка 10% для друзей из социальных сетей.</p>
-			  <ul>
+			  <ul class="social-networks-content">
 			    <li><a type="button" class="social-button" href="vk.com"><img src="img/vk-icon.svg"></a></li>
 				<li><a type="button" class="social-button" href="instagram.com"><img src="img/insta-icon.svg"></a></li>
 				<li><a type="button" class="social-button" href="facebook.com"><img src="img/fb-icon.svg"></a></li>
