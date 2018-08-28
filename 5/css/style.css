@@ -171,7 +171,7 @@ th {
 	width: 15px;
 	height: 15px;
 	background-size: 15px auto;
-	background-image: url(../img/cart-icon.svg);
+	background-image: url("../img/cart-icon.svg");
 	background-repeat: no-repeat;
 	background-position: 0 0;
 }
@@ -181,5 +181,26 @@ th {
 }
 
 .cart-block::before, .current::after, .description ul li::before {
+	content: "";
+}
+
+input[type=radio]:checked+label::before {
+	background-image: url("..img/radio-on.svg");
+	opacity: .5;
+}
+
+input[type=radio]+label::before {
+	background-image: url("..img/radio-off.svg");
+	opacity: .5;
+}
+
+input[type=checkbox]+label::before, input[type=radio]+label:before{
+	position: absolute;
+	top: 0;
+	width: 26px;
+	margin: 0;
+	background-repeat: no-repeat;
+	height: 26px;
+	left: 0;
 	content: "";
 }
